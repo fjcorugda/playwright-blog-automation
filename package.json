@@ -1,0 +1,23 @@
+{
+  "name": "playwright-blog-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:app": "ts-node app/server.ts",
+    "test:e2e": "npx playwright test",
+    "dev": "concurrently \"npm run start:app\" \"npm run test:e2e\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.6.0",
+    "express": "^5.2.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
