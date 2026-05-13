@@ -1,19 +1,22 @@
-import { BasePage } from './BasePage';
-import { expect } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 
-export class HomePage extends BasePage {
-  readonly titleInput = this.page.locator('#title');
-  readonly contentInput = this.page.locator('#content');
-  readonly submitBtn = this.page.locator('#submit');
-  readonly postList = this.page.locator('#posts');
+export class HomePage {
+  readonly page: Page;
+  readonly titleInput: Locator;
+  readonly contentInput: Locator;
+  readonly submitBtn: Locator;
+
+  constructor(page: Page) {
+    this.page = page;
+
+    this.titleInput = page.getByTestId('title-input');
+    this.contentInput = page.getByTestId('content-input');
+    this.submitBtn = page.getByTestId('submit-button');
+  }
 
   async createPost(title: string, content: string) {
     await this.titleInput.fill(title);
     await this.contentInput.fill(content);
     await this.submitBtn.click();
-  }
-
-  async verifyPostExists(title: string) {
-    await expect(this.postList).toContainText(title);
   }
 }
