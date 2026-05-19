@@ -45,6 +45,7 @@ on:
 
 jobs:
   e2e:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
 
     steps:
@@ -65,7 +66,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Tests
-        run: npx playwright test -c config/playwright.config.ts
+        run: npx playwright test 
 
       - name: Upload Report
         if: always()

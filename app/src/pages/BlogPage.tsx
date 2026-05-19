@@ -1,6 +1,6 @@
-import Navbar from '../components/Navbar';
-import ArticleCard from '../components/ArticleCard';
-import { seededPosts } from '../data/seed';
+import Navbar from '../components/Navbar.js';
+import ArticleCard from '../components/ArticleCard.js';
+import { seededPosts } from '../data/seed.js';
 
 export default function BlogPage() {
   return (
