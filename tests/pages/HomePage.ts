@@ -1,6 +1,9 @@
 import { Page, Locator } from '@playwright/test';
 
 export class HomePage {
+  navigateTo(arg0: string) {
+    throw new Error('Method not implemented.');
+  }
   readonly page: Page;
   readonly titleInput: Locator;
   readonly contentInput: Locator;

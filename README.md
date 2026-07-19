@@ -146,8 +146,3 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 Feel free to reach out if you have questions or suggestions!
-
----
-
-*Built with ❤️ for automated testing excellence*</content>
-<parameter name="filePath">c:\Users\HP\Documents\febe_automation\playwright-blog-automation\README.md
