@@ -2,7 +2,6 @@ import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
 import path from 'path';
 
-// FIX: Since config is now in ROOT, we look inside the 'config/env' folder
 dotenv.config({
   path: process.env.CI
     ? path.resolve(__dirname, 'config/env/.env.ci')
@@ -10,7 +9,6 @@ dotenv.config({
 });
 
 export default defineConfig({
-  // FIX: Since config is in ROOT, tests are in './tests'
   testDir: './tests',
 
   fullyParallel: true,
@@ -22,7 +20,6 @@ export default defineConfig({
   ],
 
   use: {
-    // Use the env variable or fallback to localhost
     baseURL: process.env.BASE_URL || 'http://127.0.0.1:5174',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',

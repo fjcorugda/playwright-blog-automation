@@ -1,4 +1,3 @@
-// app/server.ts
 import type { Request, Response } from 'express';
 import express from 'express';
 
@@ -18,7 +17,6 @@ app.post('/api/posts', (req: Request, res: Response) => {
   res.status(201).json(newPost);
 });
 
-// Simple HTML serving for the mock UI
 app.get('/', (req: Request, res: Response) => {
   res.send(`
     <html>
